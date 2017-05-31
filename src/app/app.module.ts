@@ -5,11 +5,15 @@ import {
   NgModule
 } from '@angular/core';
 import {AppComponent} from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {HomeModule} from './home/home.module';
+import {ErrorNotFoundComponent} from './error.component'
 
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorNotFoundComponent
   ],
   /**
    * Import Angular's modules.
@@ -17,7 +21,9 @@ import {AppComponent} from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HomeModule,
+    AppRoutingModule
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.

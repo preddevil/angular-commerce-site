@@ -8,6 +8,10 @@ import {
 })
 export class AppComponent {
 
-  name: 'Phat';
+  navigationMenu = ["Programming", "Self-help", "Cooking"];
+
+  navigationMenuClicked() {
+    console.log('abc');
+  }
 
 }

@@ -1,2 +1,9 @@
-<h1>WELCOME PHAT NGUYEN</h1>
-<h2>
+<h1>BOOK PLACE</h1>
+
+<div class="navigation-bar">
+    <span *ngFor="let menu of navigationMenu">
+        <a (click)="navigationMenuClicked()">{{menu}}</a>
+    </span>
+</div>
+
+<router-outlet></router-outlet>
