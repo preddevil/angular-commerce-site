@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
+$body:#0b0b0b;
+$contrast:#00fefe;
+$contrastopacity: rgba(0, 254, 254, .4);
+$productbg:rgba(255, 255, 255, .45);
+$quickViewBg:rgba(0, 0, 0, .90);
+$overlay:rgba(0, 0, 0, 1);
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $body;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    padding: 20px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.quickviewContainer {
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    background: $quickViewBg;
+    top: 70px;
+    right: -100%;
+    transition: all .3s ease;
+    padding: 30px;
+    color: #fff;
+    .close {
+        height: 20px;
+        width: 20px;
+        float: right;
+        cursor: pointer;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: #ffF;
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+    .headline {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    .description {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    img {
+        display: inline-block;
+        border-radius: 4px;
+        margin: 5px;
+    }
+    &.active {
+        right: 0;
+    }
+}

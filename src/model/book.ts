@@ -1,10 +1,12 @@
 export class Book {
-    constructor(name: String, description: String, price: number) {
+    name: String;
+    description: String;
+    price: number;
+    categories: Array<number>;
+    constructor(name: String, description: String, price: number, categories: Array<number>) {
         this.name = name;
         this.description = description;
         this.price = price;
+        this.categories = categories;
     }
-    name: String;
-    description: String;
-    price: number
 }

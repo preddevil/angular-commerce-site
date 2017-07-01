@@ -5,6 +5,7 @@ import {
   NgModule
 } from '@angular/core';
 import {AppComponent} from './app.component';
+import {NavigationComponent} from './navigation/navigation.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HomeModule} from './home/home.module';
 import {ErrorNotFoundComponent} from './error.component'
@@ -13,6 +14,7 @@ import {ErrorNotFoundComponent} from './error.component'
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
+    NavigationComponent,
     ErrorNotFoundComponent
   ],
   /**

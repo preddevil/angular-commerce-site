@@ -4,14 +4,9 @@ import {
 
 @Component({
     selector: 'app',
+    styleUrls: ['./app.component.scss'],
     templateUrl: './app.component.html'
 })
 export class AppComponent {
-
-  navigationMenu = ["Programming", "Self-help", "Cooking"];
-
-  navigationMenuClicked() {
-    console.log('abc');
-  }
 
 }

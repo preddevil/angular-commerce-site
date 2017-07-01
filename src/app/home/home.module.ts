@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {HomeRoutingModule} from './home-routing.module';
 import {HomeComponent} from './home.component';
+import {ProductThumbnailComponent} from '../product-thumbnail/product-thumbnail.component'
 import {CommonModule} from '@angular/common';
 
 @NgModule({
@@ -9,7 +10,8 @@ import {CommonModule} from '@angular/common';
         HomeRoutingModule
     ],
     declarations: [
-        HomeComponent
+        HomeComponent,
+        ProductThumbnailComponent
     ],
     providers: [
 

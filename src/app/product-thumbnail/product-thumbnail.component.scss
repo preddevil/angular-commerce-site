@@ -1,0 +1,91 @@
+$productbg:rgba(255, 255, 255, .45);
+$contrast:#00fefe;
+$contrastopacity: rgba(0, 254, 254, .4);
+.product {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 240px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: $productbg;
+    margin: 20px;
+    padding: 15px;
+    img {
+        position: relative;
+        top: -15px;
+        left: -15px;
+        transition: all .2s ease;
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 70%);
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        &:hover {
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+            transform: scale(1.1);
+        }
+    }
+    h2 {
+        text-align: left;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+    .description {
+        text-align: left;
+        font-size: 11px;
+        max-height: 23px;
+        overflow: hidden;
+    }
+    .price {
+        text-align: right;
+        font-size: 18px;
+        margin-top: 6px;
+    }
+    .btn {
+        position: absolute;
+        font-size: 11px;
+        font-weight: bold;
+        float: right;
+        padding: 10px;
+        border: 2px solid $contrast;
+        border-radius: 20px;
+        bottom: 10px;
+        right: 10px;
+        color: $contrast;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all .2s ease;
+        &.ok {
+            background-color: $contrastopacity;
+            &:after {
+                content: "\e080";
+            }
+        }
+        &:hover {
+            padding-right: 25px;
+            &:after {
+                margin-left: 5px;
+            }
+        }
+        &:after {
+            font-family: 'simple-line-icons';
+            content: "\e095";
+            transition: all .2s ease;
+            position: absolute;
+            color: $contrast;
+            margin-left: 30px;
+            transition: all .2s ease;
+        }
+    }
+    .quickview {
+        position: absolute;
+        bottom: 20px;
+        font-size: 11px;
+        cursor: pointer;
+        &:before {
+            font-family: 'simple-line-icons';
+            content: "\e05d";
+            margin-right: 3px;
+        }
+    }
+}

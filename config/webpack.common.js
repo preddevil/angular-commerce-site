@@ -22,7 +22,6 @@ module.exports = function(env) {
              * and pre-compiled TypeScript files).
              */
             extensions: ['.ts', '.js', '.json']
-                // modules: [root('src'), root('node_modules')],
         },
         module: {
             rules: [{
@@ -43,12 +42,13 @@ module.exports = function(env) {
                 },
                 {
                     /**
-                     * Applies the css loader first to flatten CSS @import and url(...) statements
-                     * Then it applies the style loader to append the css inside <style> elements on the page
+                     * To string and sass loader support for *.scss files (from Angular components)
+                     * Returns compiled css content as string
                      */
-                    test: /\.css$/,
-                    use: 'style-loader!css-loader'
-                }
+                    test: /\.scss$/,
+                    use: ['to-string-loader', 'css-loader', 'sass-loader'],
+                    exclude: [root('src', 'styles')]
+                },
             ]
         },
         plugins: [
@@ -69,6 +69,10 @@ module.exports = function(env) {
                 name: ['app', 'vendor', 'polyfill']
             }),
 
+            /**
+             * The plugin will generate an HTML5 file for you 
+             * that includes all your webpack bundles in the body using script tags
+             */
             new HtmlWebpackPlugin({
                 template: 'src/index.html'
             })

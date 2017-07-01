@@ -1,9 +1,5 @@
 <h1>BOOK PLACE</h1>
 
-<div class="navigation-bar">
-    <span *ngFor="let menu of navigationMenu">
-        <a (click)="navigationMenuClicked()">{{menu}}</a>
-    </span>
-</div>
+<navigation></navigation>
 
 <router-outlet></router-outlet>
