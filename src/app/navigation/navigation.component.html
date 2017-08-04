@@ -1,9 +1,4 @@
 <nav>
-    <div class='mini'>
-        <p class='products'>Empty</p>
-        <p class='names'></p>
-        <p class='miniprice'></p>
-    </div>
     <ul *ngFor="let menu of navigationMenu">
         <li (click)="clickNavigation(menu.id)">{{menu.name}}</li>
     </ul>

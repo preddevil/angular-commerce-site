@@ -1,6 +1,13 @@
-$productbg:rgba(255, 255, 255, .45);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css');
+$productbg:rgba(255,
+255,
+255,
+.45);
 $contrast:#00fefe;
-$contrastopacity: rgba(0, 254, 254, .4);
+$contrastopacity: rgba(0,
+254,
+254,
+.4);
 .product {
     position: relative;
     overflow: hidden;
@@ -15,14 +22,8 @@ $contrastopacity: rgba(0, 254, 254, .4);
         position: relative;
         top: -15px;
         left: -15px;
-        transition: all .2s ease;
-        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 70%);
         border-top-right-radius: 4px;
         border-top-left-radius: 4px;
-        &:hover {
-            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-            transform: scale(1.1);
-        }
     }
     h2 {
         text-align: left;
